@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center py-5">Nộp bài JS buổi 4</h1>
+
+    <h3 class="text-center pt-5">Bài 1</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Tìm ngày tháng năm</div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Ngày tháng năm </label>
+              <input id="date" type="date" class="form-control" />
+            </div>
+            <button id="btnCalPreDay" class="btn btn-success">
+              Tính ngày hôm trước
+            </button>
+            <button id="btnCalNextDay" class="btn btn-success">
+              Tính ngày hôm sau
+            </button>
+          </div>
+          <div id="infoPreDate" class="card-footer text-muted"></div>
+          <div id="infoNextDate" class="card-footer text-muted"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-center pt-5">Bài 2</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Xem số ngày của tháng</div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Nhập tháng năm </label>
+              <input id="month" type="month" class="form-control" />
+            </div>
+            <button id="btnCalDate" class="btn btn-success">Tính</button>
+          </div>
+          <div id="infoDate" class="card-footer text-muted"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-center pt-5">Bài 4</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">In tên sinh viên xa trường nhất</div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Nhập toạ độ trường</label>
+              <form action="" class="d-flex">
+                <input
+                  id="schoolX"
+                  type="number"
+                  class="form-control col-md-4"
+                  placeholder="Toạ độ x"
+                />
+                <input
+                  id="schoolY"
+                  type="number"
+                  class="form-control col-md-4 d-flex"
+                  placeholder="Toạ độ Y"
+                />
+              </form>
+            </div>
+            <div class="form-group">
+              <label>Sinh viên thứ 1: </label>
+              <form action="" class="d-flex">
+                <input
+                  id="student1Name"
+                  type="text"
+                  class="form-control col-md-4"
+                  placeholder="Tên"
+                />
+                <input
+                  id="student1X"
+                  type="number"
+                  class="form-control col-md-4"
+                  placeholder="Toạ độ x"
+                />
+                <input
+                  id="student1Y"
+                  type="number"
+                  class="form-control col-md-4 d-flex"
+                  placeholder="Toạ độ Y"
+                />
+              </form>
+            </div>
+            <div class="form-group">
+              <label>Sinh viên thứ 2: </label>
+              <form action="" class="d-flex">
+                <input
+                  id="student2Name"
+                  type="text"
+                  class="form-control col-md-4"
+                  placeholder="Tên"
+                />
+                <input
+                  id="student2X"
+                  type="number"
+                  class="form-control col-md-4"
+                  placeholder="Toạ độ x"
+                />
+                <input
+                  id="student2Y"
+                  type="number"
+                  class="form-control col-md-4 d-flex"
+                  placeholder="Toạ độ Y"
+                />
+              </form>
+            </div>
+            <div class="form-group">
+              <label>Sinh viên thứ 3: </label>
+              <form action="" class="d-flex">
+                <input
+                  id="student3Name"
+                  type="text"
+                  class="form-control col-md-4"
+                  placeholder="Tên"
+                />
+                <input
+                  id="student3X"
+                  type="number"
+                  class="form-control col-md-4"
+                  placeholder="Toạ độ x"
+                />
+                <input
+                  id="student3Y"
+                  type="number"
+                  class="form-control col-md-4 d-flex"
+                  placeholder="Toạ độ Y"
+                />
+              </form>
+            </div>
+            <button id="btnCalFarthestStudent" class="btn btn-success">Tính</button>
+          </div>
+          <div id="infoFarthestStudent" class="card-footer text-muted"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
