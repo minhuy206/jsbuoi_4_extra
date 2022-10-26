@@ -12,7 +12,7 @@
  *              - Nếu là ngày 1/1 => ngày trước đó day = 31 month = 12;
  *  -Đầu ra: in ra màn hình
  */
-
+// Đếm ngày trước đó
 document.getElementById("btnCalPreDay").onclick = function () {
   var getDate = document.getElementById("date").value;
   getDate = new Date(getDate);
@@ -52,7 +52,7 @@ document.getElementById("btnCalPreDay").onclick = function () {
   infoPreDate.innerHTML = date + "/" + month + "/" + year;
   document.getElementById("infoPreDate").appendChild(infoPreDate);
 };
-
+// Đếm ngày tiếp theo
 document.getElementById("btnCalNextDay").onclick = function () {
   var getDate = document.getElementById("date").value;
   getDate = new Date(getDate);
@@ -153,6 +153,7 @@ document.getElementById("btnCalDate").onclick = function () {
  * => được 1 đọc hai, được 2 đọc hai, ... , được 9 đọc chín
  * Đầu ra: in ra màn hình kết quả 
  */ 
+
 document.getElementById("btnRead").onclick = function (params) {
   var number = document.getElementById("number").value * 1;
   var hundredsNumber = Math.floor(number / 100);
@@ -273,6 +274,7 @@ document.getElementById("btnRead").onclick = function (params) {
   document.getElementById("infoRead").appendChild(infoRead);
   infoRead.className = "alert alert-success";
 };
+
 /**
  * Bài 4
  * -Đầu vào: nhập toạ độ trường, sv1, sv2, sv3
@@ -280,6 +282,7 @@ document.getElementById("btnRead").onclick = function (params) {
  * studentCoordinate = Math.sqrt(student1Coordinate);
  * -Đầu ra: in ra màn hình tên sinh viên có khoảng cách lớn nhất
  */
+
 document.getElementById("btnCalFarthestStudent").onclick = function () {
   var schoolX = document.getElementById("schoolX").value * 1;
   var schoolY = document.getElementById("schoolY").value * 1;
