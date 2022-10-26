@@ -145,7 +145,140 @@ document.getElementById("btnCalDate").onclick = function () {
 };
 
 /**
+ * Bài 3
+ * Đầu vào: nhập số có 3 chữ số
+ * Xử lí: -Lấy số hàng trăm = Math.floor(số có 3 chữ số % 100)
+ *        -lấy số hàng chục = Math.floor(số có 3 chữ số % 100 / 10)
+ *        -lấy số hàng đơn vị = Math.floor(số có 3 chữ số % 100 % 10)
+ * => được 1 đọc hai, được 2 đọc hai, ... , được 9 đọc chín
+ * Đầu ra: in ra màn hình kết quả 
+ */ 
+document.getElementById("btnRead").onclick = function (params) {
+  var number = document.getElementById("number").value * 1;
+  var hundredsNumber = Math.floor(number / 100);
+  var dozensNumber = Math.floor((number % 100) / 10);
+  var unitsNumber = (number % 100) % 10;
+
+  switch (hundredsNumber) {
+    case 0:
+      readHundredsNumber = "không";
+      break;
+    case 1:
+      readHundredsNumber = "một";
+      break;
+    case 2:
+      readHundredsNumber = "hai";
+      break;
+    case 3:
+      readHundredsNumber = "ba";
+      break;
+    case 4:
+      readHundredsNumber = "bốn";
+      break;
+    case 5:
+      readHundredsNumber = "năm";
+      break;
+    case 6:
+      readHundredsNumber = "sáu";
+      break;
+    case 7:
+      readHundredsNumber = "bảy";
+      break;
+    case 8:
+      readHundredsNumber = "tám";
+      break;
+    case 9:
+      readHundredsNumber = "chín";
+      break;
+    default:
+      break;
+  }
+  switch (dozensNumber) {
+    case 0:
+      readDozensNumber = "linh";
+      break;
+    case 1:
+      readDozensNumber = "mười";
+      break;
+    case 2:
+      readDozensNumber = "hai mươi";
+      break;
+    case 3:
+      readDozensNumber = "ba mươi";
+      break;
+    case 4:
+      readDozensNumber = "bốn mươi";
+      break;
+    case 5:
+      readDozensNumber = "năm mươi";
+      break;
+    case 6:
+      readDozensNumber = "sáu mươi";
+      break;
+    case 7:
+      readDozensNumber = "bảy mươi";
+      break;
+    case 8:
+      readDozensNumber = "tám mươi";
+      break;
+    case 9:
+      readDozensNumber = "chín mươi";
+      break;
+    default:
+      break;
+  }
+  switch (unitsNumber) {
+    case 0:
+      readUnitsNumber = "";
+      break;
+    case 1:
+      readUnitsNumber = "một";
+      break;
+    case 2:
+      readUnitsNumber = "hai";
+      break;
+    case 3:
+      readUnitsNumber = "ba";
+      break;
+    case 4:
+      readUnitsNumber = "bốn";
+      break;
+    case 5:
+      readUnitsNumber = "năm";
+      break;
+    case 6:
+      readUnitsNumber = "sáu";
+      break;
+    case 7:
+      readUnitsNumber = "bảy";
+      break;
+    case 8:
+      readUnitsNumber = "tám";
+      break;
+    case 9:
+      readUnitsNumber = "chín";
+      break;
+    default:
+      break;
+  }
+
+  if (unitsNumber == 0 && dozensNumber == 0) {
+    readDozensNumber = "";
+    readUnitsNumber = "";
+  }
+  document.getElementById("infoRead").innerHTML = "";
+  var infoRead = document.createElement("p");
+  infoRead.innerHTML =
+    readHundredsNumber + " trăm " + readDozensNumber + " " + readUnitsNumber;
+  document.getElementById("infoRead").appendChild(infoRead);
+  infoRead.className = "alert alert-success";
+};
+/**
  * Bài 4
+ * -Đầu vào: nhập toạ độ trường, sv1, sv2, sv3
+ * -Xử lí: tính khoảng cách từ trường đến sv1, sv2, sv3 với công thức: student1Coordinate = (schoolX - studentX) * (schoolX - studentX) + (schoolY - studentY) * (schoolY - studentY)
+ * studentCoordinate = Math.sqrt(student1Coordinate);
+ * -Đầu ra: in ra màn hình tên sinh viên có khoảng cách lớn nhất
  */
 document.getElementById("btnCalFarthestStudent").onclick = function () {
   var schoolX = document.getElementById("schoolX").value * 1;
